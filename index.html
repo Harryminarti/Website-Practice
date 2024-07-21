@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Basic styling for the slider */
+        .slider {
+            overflow: hidden;
+            width: 100%;
+            height: 300px; /* Adjust the height as needed */
+        }
+
+        .slider-content {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .slide {    
+            flex: 0 0 100%;
+        }
+    </style>
+    <title>Responsive Website Project</title>
+
+
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+
+    <!-- Navbar is going here  -->
+
+
+    <nav class="navbar">
+
+
+        <div class="nav_warp">
+
+            <img src="/image/logo.png" alt="Logo" id="logo">
+
+            <ul>
+
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Register</a></li>
+                <li id="post"><a href="#" id="new_post">New Post</a></li>
+
+            </ul>
+
+
+
+        </div>
+
+    </nav>
+
+
+    <!-- Header is going here  -->
+
+
+
+    <header class="container">
+
+
+        <!-- <div class="wrapper">
+
+            <h1> World Theater Day</h1>
+            <p><b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur minus enim praesentium suscipit
+                    !</b></p>
+
+            <a href="#">Create New Post</a>
+
+
+
+
+        </div> -->
+
+
+    </header>
+
+
+
+
+    <!-- Content is goint here  -->
+
+    <section class="content" id="r">
+
+
+
+        <div class="left">
+
+            <div class="l">
+
+
+            <img src="/image/v13_20.png" alt="images" class="content_img">
+            <h1 class="head">Father Of Theater</h1>
+
+            <!-- <span id="special">
+                <a href="#"><u>John Doe</u></a>
+                <time>January 1,2023</time>
+            </span> -->
+
+
+            <!-- <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat eligendi cupiditate architecto. Illum,
+                iste adipisci? Minima aspernatur quaerat repellat accusamus ratione provident deleniti iste voluptates
+                similique voluptatiaborum voluptatum quibusdam inventore
+                quia perferendis ipsum, quam aliquam consectetur repellat non explicabo voluptas unde in sit
+                perspiciatis itaque error!</p> -->
+
+            <!-- <a href="#">Continue Reading....</a> -->
+           </div>
+           <div class="l">
+
+            <!-- <h1 class="head">Why MERN Stack is on Hot Cake?</h1>
+
+
+            <span id="special">
+                <a href="#"><u>John Doe</u></a>
+                <time>January 1,2023</time>
+            </span> -->
+
+
+            <!-- <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat eligendi cupiditate architecto. Illum,
+                iste adipisci? Minima aspernatur quaerat repellat accusamus ratione provident deleniti iste voluptates
+                similique voluptatiaborum voluptatum quibusdam inventore
+                quia perferendis ipsum, quam aliquam consectetur repellat non explicabo voluptas unde in sit
+                perspiciatis itaque error!</p> -->
+
+            <!-- <a href="#">Continue Reading....</a> -->
+           </div>
+           
+
+        </div>
+        
+
+      
+        <div class="right">
+
+            <h1 class="head">About The Theater</h1>
+
+
+            <p class="para">World Theatre Day, celebrated annually on March 27th, is a significant event that honors the art of theatre and its impact on culture and society. The day was initiated in 1962 by the International Theatre Institute (ITI) and is marked by theatre communities around the globe1.
+
+Theatre, as an art form, has the power to entertain, educate, and inspire. It serves as a mirror to society, reflecting its virtues and vices, and has the unique ability to bring people together, transcending boundaries and creating a shared experience. World Theatre Day celebrates this spirit of unity and the transformative power of theatre.
+</p>
+                <!-- <a href="#">Continue Reading...</a> -->
+
+            </div>
+            <!-- <div>
+                <h1 class="head">About The Author</h1>
+    
+                <img src="image/author.jpg" alt="author image" class="content_img" >
+                <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore doloremque ea, in perferendis ad
+                    susciprovque laboriosam tempora temporibus quaerat vel nihil quibusdam eligendi!</p>
+                    <a href="#">Continue Reading...</a>
+    
+                </div> -->
+        </div>
+
+
+
+
+
+    </section>
+
+
+
+    <div class="slider">
+        <div class="slider-content">
+            <div class="slide">Slide 1
+                <img src="/image/first_movie.jpeg" alt="images">
+
+            </div>
+            <div class="slide">Slide 2
+                <img src="/image/uu.jpg" alt="images" >
+
+            </div>
+            <div class="slide">Slide 3
+                <img src="/image/indian.jpg" alt="images" >
+
+            </div>
+            <!-- Add more slides as needed -->
+        </div>
+    </div>
+
+    <!-- Footer is going here  -->
+    <script>
+
+    const sliderContent = document.querySelector('.slider-content');
+        let slideIndex = 0;
+
+        function showSlide() {
+            sliderContent.style.transform = `translateX(-${slideIndex * 100}%)`;
+        }
+
+        // Change slide automatically (you can customize this)
+        setInterval(() => {
+            slideIndex = (slideIndex + 1) % 3; // Adjust the number of slides
+            showSlide();
+        }, 3000); // Change slide every 3 seconds
+    </script>
+
+
+</body>
+
+</html>
